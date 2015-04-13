@@ -80,7 +80,7 @@ module BetterErrors
     end
 
     def uri_prefix
-      env["SCRIPT_NAME"] || ""
+      BetterErrors.uri_prefix || env["SCRIPT_NAME"] || ""
     end
 
     def request_path
